@@ -1,0 +1,57 @@
+package com.m7mdabaza.emlenotes.ui;
+
+import android.util.Log;
+
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+
+import com.m7mdabaza.emlenotes.pojo.FavoriteModel;
+import com.m7mdabaza.emlenotes.pojo.FirstScreenResponse;
+import com.m7mdabaza.emlenotes.pojo.MessageModel;
+import com.m7mdabaza.emlenotes.pojo.SecondScreenResponse;
+import com.m7mdabaza.emlenotes.retrofit.APIs;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class MessagesViewModel extends ViewModel {
+    private static final String TAG = "MessagesViewModel";
+
+    private final ArrayList<MessageModel> messagesList = new ArrayList<>();
+
+    MutableLiveData<ArrayList<MessageModel>> messagesMutableLiveData = new MutableLiveData<>();
+
+
+    void getHttpRequest() {
+        RetrofitObjectInterFace retrofitObjectInterFace = APIs.getRetrofit2().create(RetrofitObjectInterFace.class);
+        Call<SecondScreenResponse> call = retrofitObjectInterFace.getObjects2();
+        call.enqueue(new Callback<SecondScreenResponse>() {
+            @Override
+            public void onResponse(Call<SecondScreenResponse> call, Response<SecondScreenResponse> response) {
+                Log.d(TAG, "MAA 2 onResponse: done ");
+                assert response.body() != null;
+                for (int i = 0; i < response.body().getMessages().size(); i++) {
+                    messagesList.add(new MessageModel(
+                            response.body().getMessages().get(i).getMessage(),
+                            response.body().getPic(),
+                            response.body().getMessages().get(i).getSender()));
+                }
+                messagesMutableLiveData.setValue(messagesList);
+
+            }
+
+            @Override
+            public void onFailure(Call<SecondScreenResponse> call, Throwable t) {
+                Log.d(TAG, "MAA 2 onFailure: fail");
+            }
+        });
+    }
+
+    void sendMessage(String message) {
+        messagesList.add(new MessageModel(message, "", 1));
+    }
+
+}

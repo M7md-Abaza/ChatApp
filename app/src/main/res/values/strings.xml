@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Emle Notes</string>
+    <string name="favorites">Favorites Contact</string>
+    <string name="recent">Recent:</string>
+    <string name="name">NAME</string>
+    <string name="message">Message</string>
+    <string name="time">Time</string>
+    <string name="_new">new</string>
+    <string name="no_internet_connection">NO INTERNET CONNECTION</string>
+    <string name="_2">2</string>
+    <string name="new_group">New group</string>
+    <string name="select_contacts">Select Contacts</string>
+    <string name="enter_message">Enter Message ...</string>
+    <string name="text_message">Text Message</string>
+</resources>
