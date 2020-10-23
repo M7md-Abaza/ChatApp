@@ -59,6 +59,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
+        android:id="@+id/imgThreeDots"
         android:layout_width="40dp"
         android:layout_height="30dp"
         android:layout_marginTop="6dp"
@@ -66,7 +67,8 @@
         android:src="@drawable/three_dots"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:ignore="ContentDescription" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messageRecycle"
