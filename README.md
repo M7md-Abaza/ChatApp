@@ -15,7 +15,7 @@
 * Retrofit
 * Picasso
 * ViewModel and LiveData
-* swiperefreshlayout
+* Swipe RefreshLayout
 * Android Material
 * RecyclerView
 * ConstraintLayout
