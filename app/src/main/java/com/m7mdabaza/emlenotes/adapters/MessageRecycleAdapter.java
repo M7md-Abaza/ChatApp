@@ -36,6 +36,7 @@ public class MessageRecycleAdapter extends RecyclerView.Adapter<MessageRecycleAd
     @Override
     public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
         MessageModel messageModel = MessageModel.get(position);
+        // senderCode to check if the message received to user or sent by user
         Integer senderCode = messageModel.getSender();
 
         if (senderCode == 0) {
@@ -77,6 +78,7 @@ public class MessageRecycleAdapter extends RecyclerView.Adapter<MessageRecycleAd
 
     }
 
+    // Method setList for receive list of data and sent it to MessageRecycler model MessageModel.java
     public void setList(ArrayList<MessageModel> MessageModel) {
         this.MessageModel = MessageModel;
     }

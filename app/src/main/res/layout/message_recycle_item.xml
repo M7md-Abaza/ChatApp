@@ -47,7 +47,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/senderConstrain_item"
         android:layout_width="match_parent"

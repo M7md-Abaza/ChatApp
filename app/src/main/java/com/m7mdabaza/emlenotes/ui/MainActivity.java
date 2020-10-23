@@ -43,12 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // swipe down to refresh the activity
     private void swipeToRefresh() {
         pullToRefresh.setOnRefreshListener(() -> {
             pullToRefresh.setRefreshing(false);
         });
     }
 
+    // method to observe the data which in the FavoriteRecentViewModel and display it in Favorite and Recent recycles
     private void displayFavoriteRecentData() {
         if (checkConnectivity()) {
             // to tell the activity to be a listener for ViewModel
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             //getting Data from ViewModel
             favoriteRecentViewModel.getHttpRequest();
 
+            // get data from favoriteMutableLiveData and display on FavoriteRecycler
             favoriteRecentViewModel.favoriteMutableLiveData.observe(this, favoriteModels -> {
                 progressFavorite.setVisibility(View.GONE);
                 favoriteRecycle.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 favoriteRecycle.setAdapter(favoriteAdapter);
             });
 
+            // get data from recentMutableLiveData and display on RecentRecycler
             favoriteRecentViewModel.recentMutableLiveData.observe(this, recentModels -> {
                 progressRecent.setVisibility(View.GONE);
                 recentRecycle.setLayoutManager(new LinearLayoutManager(MainActivity.this));
@@ -73,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 recentRecycle.setAdapter(recentAdapter);
 
             });
-        } else {
+        } else { // if no internet connection
             progressFavorite.setVisibility(View.GONE);
             progressRecent.setVisibility(View.GONE);
             noInternet.setVisibility(View.VISIBLE);
@@ -81,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // to check if there is internet connection or not by return true or false
     private boolean checkConnectivity() {
         ConnectivityManager connectivityManager = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //to declare Views to be readable in java
 
     void findViewById() {
         favoriteRecycle = findViewById(R.id.favoriteRecycle);

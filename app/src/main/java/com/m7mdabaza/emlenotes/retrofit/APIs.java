@@ -3,14 +3,17 @@ package com.m7mdabaza.emlenotes.retrofit;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+//APIs class to handle api by Retrofit
+
 public class APIs {
 
-    // https://emlenotes.com/challenges/android/Screen_1.json
-    // https://emlenotes.com/challenges/android/Screen_2.json
+    // BaseURL = https://emlenotes.com/challenges/android/Screen_1.json
+    // BaseURL = https://emlenotes.com/challenges/android/Screen_2.json
 
     private static Retrofit retrofit;
 
-    public static Retrofit getRetrofit1() {
+    // for first screen data
+    public static Retrofit getRetrofitFirstScreen() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl("https://emlenotes.com/challenges/android/")
@@ -20,7 +23,8 @@ public class APIs {
         return retrofit;
     }
 
-    public static Retrofit getRetrofit2() {
+    // for second screen data
+    public static Retrofit getRetrofitSecondScreen() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl("https://emlenotes.com/challenges/android/")

@@ -45,12 +45,14 @@ public class RecentRecycleAdapter extends RecyclerView.Adapter<RecentRecycleAdap
         holder.name.setText(recentModel.getName());
         holder.message.setText(recentModel.getMessage());
         holder.time.setText(recentModel.getTime());
+        String imageURL = recentModel.getPic();
+        Picasso.get().load(imageURL).into(holder.pic);
+
         if (recentModel.get_new() != 0) {
             holder._new.setText(recentModel.get_new().toString());
             holder._new.setVisibility(View.VISIBLE);
         }
-        String imageURL = recentModel.getPic();
-        Picasso.get().load(imageURL).into(holder.pic);
+
         if (position % 2 == 1) {
             holder.main.setBackgroundColor(Color.WHITE);
         }
@@ -61,6 +63,7 @@ public class RecentRecycleAdapter extends RecyclerView.Adapter<RecentRecycleAdap
                 intent.putExtra("name", recentModel.getName());
                 intent.putExtra("imageURL", recentModel.getPic());
 
+                // Pairs used for animation transition from recycle item to ChatActivity.java
                 Pair[] pairs = new Pair[2];
                 pairs[0] = new Pair<View, String>(holder.pic, "ImageTransition");
                 pairs[1] = new Pair<View, String>(holder.name, "NameTransition");
@@ -71,6 +74,7 @@ public class RecentRecycleAdapter extends RecyclerView.Adapter<RecentRecycleAdap
             }
         });
 
+        // for increase the height of first item
         if (position == 0) {
             holder.main.getLayoutParams().height = 300;
         }
@@ -100,6 +104,7 @@ public class RecentRecycleAdapter extends RecyclerView.Adapter<RecentRecycleAdap
 
     }
 
+    // Method setList for receive list of data and sent it to RecentRecycler model > RecentModel.java
     public void setList(ArrayList<RecentModel> RecentModel, MainActivity mContext) {
         this.RecentModel = RecentModel;
         this.mContext = mContext;

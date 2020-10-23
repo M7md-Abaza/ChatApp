@@ -26,8 +26,8 @@ public class MessagesViewModel extends ViewModel {
 
 
     void getHttpRequest() {
-        RetrofitObjectInterFace retrofitObjectInterFace = APIs.getRetrofit2().create(RetrofitObjectInterFace.class);
-        Call<SecondScreenResponse> call = retrofitObjectInterFace.getObjects2();
+        RetrofitObjectInterFace retrofitObjectInterFace = APIs.getRetrofitSecondScreen().create(RetrofitObjectInterFace.class);
+        Call<SecondScreenResponse> call = retrofitObjectInterFace.getSecondScreenObjects();
         call.enqueue(new Callback<SecondScreenResponse>() {
             @Override
             public void onResponse(Call<SecondScreenResponse> call, Response<SecondScreenResponse> response) {
@@ -50,8 +50,11 @@ public class MessagesViewModel extends ViewModel {
         });
     }
 
+    // method sendMessage for get sent message and add it to messagesList
     void sendMessage(String message) {
         messagesList.add(new MessageModel(message, "", 1));
     }
 
 }
+
+

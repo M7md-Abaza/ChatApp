@@ -58,6 +58,7 @@ public class FavoriteRecycleAdapter extends RecyclerView.Adapter<FavoriteRecycle
 
     }
 
+    // Method setList for receive list of data and sent it to FavoriteRecycler model > Favorite.java
     public void setList(ArrayList<FavoriteModel> FavoriteModel, MainActivity mContext) {
         this.FavoriteModel = FavoriteModel;
         this.mContext = mContext;

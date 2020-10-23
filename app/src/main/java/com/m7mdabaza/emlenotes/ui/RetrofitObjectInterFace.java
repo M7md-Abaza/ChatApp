@@ -10,10 +10,12 @@ import retrofit2.http.GET;
 // Retrofit Interface
 public interface RetrofitObjectInterFace {
 
+    // first screen data Interface
     @GET("Screen_1.json")
-    Call<FirstScreenResponse> getObjects1();
+    Call<FirstScreenResponse> getFirstScreenObjects();
 
+    // second screen data Interface
     @GET("Screen_2.json")
-    Call<SecondScreenResponse> getObjects2();
+    Call<SecondScreenResponse> getSecondScreenObjects();
 
 }

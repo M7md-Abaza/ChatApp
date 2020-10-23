@@ -30,8 +30,8 @@ public class FavoriteRecentViewModel extends ViewModel {
 
 
     void getHttpRequest() {
-        RetrofitObjectInterFace retrofitObjectInterFace = APIs.getRetrofit1().create(RetrofitObjectInterFace.class);
-        Call<FirstScreenResponse> call = retrofitObjectInterFace.getObjects1();
+        RetrofitObjectInterFace retrofitObjectInterFace = APIs.getRetrofitFirstScreen().create(RetrofitObjectInterFace.class);
+        Call<FirstScreenResponse> call = retrofitObjectInterFace.getFirstScreenObjects();
         call.enqueue(new Callback<FirstScreenResponse>() {
             @Override
             public void onResponse(Call<FirstScreenResponse> call, Response<FirstScreenResponse> response) {
