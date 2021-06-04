@@ -3,7 +3,6 @@
 
 -> Code Features:
 
-* It is written with Kotlin Programming language
 * App's Data Fetched from the URLs By Retrofit
 * Animated Transtion from Activity To Anather
 * Build with MVVM Design Pattern ( Model–View–View-Model )
