@@ -1,4 +1,4 @@
-# EmleNotes is a chat App
+# chat App
 
 
 -> Code Features:
