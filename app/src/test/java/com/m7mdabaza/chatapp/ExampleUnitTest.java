@@ -1,4 +1,4 @@
-package com.m7mdabaza.emlenotes;
+package com.m7mdabaza.chatapp;
 
 import org.junit.Test;
 

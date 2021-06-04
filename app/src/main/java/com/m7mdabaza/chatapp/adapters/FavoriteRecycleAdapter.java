@@ -1,4 +1,4 @@
-package com.m7mdabaza.emlenotes.adapters;
+package com.m7mdabaza.chatapp.adapters;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -10,9 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.m7mdabaza.emlenotes.R;
-import com.m7mdabaza.emlenotes.pojo.FavoriteModel;
-import com.m7mdabaza.emlenotes.ui.MainActivity;
+import com.m7mdabaza.chatapp.R;
+import com.m7mdabaza.chatapp.pojo.FavoriteModel;
+import com.m7mdabaza.chatapp.ui.MainActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

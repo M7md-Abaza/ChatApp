@@ -1,4 +1,4 @@
-package com.m7mdabaza.emlenotes.pojo;
+package com.m7mdabaza.chatapp.pojo;
 
 public class FavoriteModel {
 

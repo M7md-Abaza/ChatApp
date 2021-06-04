@@ -1,4 +1,4 @@
-package com.m7mdabaza.emlenotes.retrofit;
+package com.m7mdabaza.chatapp.retrofit;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

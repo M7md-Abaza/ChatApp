@@ -1,4 +1,4 @@
-package com.m7mdabaza.emlenotes.ui;
+package com.m7mdabaza.chatapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
@@ -20,8 +20,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.m7mdabaza.emlenotes.R;
-import com.m7mdabaza.emlenotes.adapters.MessageRecycleAdapter;
+import com.m7mdabaza.chatapp.R;
+import com.m7mdabaza.chatapp.adapters.MessageRecycleAdapter;
 import com.squareup.picasso.Picasso;
 
 import java.util.Objects;

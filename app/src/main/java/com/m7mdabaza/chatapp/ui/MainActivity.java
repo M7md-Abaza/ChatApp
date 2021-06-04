@@ -1,4 +1,4 @@
-package com.m7mdabaza.emlenotes.ui;
+package com.m7mdabaza.chatapp.ui;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -15,9 +15,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.m7mdabaza.emlenotes.R;
-import com.m7mdabaza.emlenotes.adapters.FavoriteRecycleAdapter;
-import com.m7mdabaza.emlenotes.adapters.RecentRecycleAdapter;
+import com.m7mdabaza.chatapp.R;
+import com.m7mdabaza.chatapp.adapters.FavoriteRecycleAdapter;
+import com.m7mdabaza.chatapp.adapters.RecentRecycleAdapter;
 
 
 import java.util.Objects;

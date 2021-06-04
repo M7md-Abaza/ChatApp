@@ -1,8 +1,6 @@
-package com.m7mdabaza.emlenotes.adapters;
+package com.m7mdabaza.chatapp.adapters;
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.m7mdabaza.emlenotes.R;
-import com.m7mdabaza.emlenotes.pojo.MessageModel;
+import com.m7mdabaza.chatapp.R;
+import com.m7mdabaza.chatapp.pojo.MessageModel;
 import com.squareup.picasso.Picasso;
 
 

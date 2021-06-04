@@ -1,15 +1,13 @@
-package com.m7mdabaza.emlenotes.ui;
+package com.m7mdabaza.chatapp.ui;
 
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.m7mdabaza.emlenotes.pojo.FavoriteModel;
-import com.m7mdabaza.emlenotes.pojo.FirstScreenResponse;
-import com.m7mdabaza.emlenotes.pojo.MessageModel;
-import com.m7mdabaza.emlenotes.pojo.SecondScreenResponse;
-import com.m7mdabaza.emlenotes.retrofit.APIs;
+import com.m7mdabaza.chatapp.pojo.MessageModel;
+import com.m7mdabaza.chatapp.pojo.SecondScreenResponse;
+import com.m7mdabaza.chatapp.retrofit.APIs;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.m7mdabaza.emlenotes.adapters;
+package com.m7mdabaza.chatapp.adapters;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
@@ -15,10 +15,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.imageview.ShapeableImageView;
-import com.m7mdabaza.emlenotes.R;
-import com.m7mdabaza.emlenotes.pojo.RecentModel;
-import com.m7mdabaza.emlenotes.ui.ChatActivity;
-import com.m7mdabaza.emlenotes.ui.MainActivity;
+import com.m7mdabaza.chatapp.R;
+import com.m7mdabaza.chatapp.pojo.RecentModel;
+import com.m7mdabaza.chatapp.ui.ChatActivity;
+import com.m7mdabaza.chatapp.ui.MainActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

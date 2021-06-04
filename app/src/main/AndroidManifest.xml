@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.m7mdabaza.emlenotes">
+    package="com.m7mdabaza.chatapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -15,10 +15,10 @@
         android:theme="@style/Theme.EmleNotes"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".ui.ChatActivity"
+            android:name="com.m7mdabaza.chatapp.ui.ChatActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.m7mdabaza.chatapp.ui.MainActivity"
             tools:ignore="InnerclassSeparator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

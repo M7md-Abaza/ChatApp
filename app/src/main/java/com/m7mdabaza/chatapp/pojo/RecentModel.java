@@ -1,25 +1,20 @@
-package com.m7mdabaza.emlenotes.pojo;
+package com.m7mdabaza.chatapp.pojo;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+public class RecentModel {
 
-public class Recent {
-
-    @SerializedName("Name")
-    @Expose
     private String name;
-    @SerializedName("Pic")
-    @Expose
-    private String pic;
-    @SerializedName("Message")
-    @Expose
     private String message;
-    @SerializedName("Time")
-    @Expose
     private String time;
-    @SerializedName("New")
-    @Expose
     private Integer _new;
+    private String pic;
+
+    public RecentModel(String name, String message, String time, Integer _new, String pic) {
+        this.name = name;
+        this.message = message;
+        this.time = time;
+        this._new = _new;
+        this.pic = pic;
+    }
 
     public String getName() {
         return name;
@@ -53,12 +48,11 @@ public class Recent {
         this.time = time;
     }
 
-    public Integer getNew() {
+    public Integer get_new() {
         return _new;
     }
 
-    public void setNew(Integer _new) {
+    public void set_new(Integer _new) {
         this._new = _new;
     }
-
 }

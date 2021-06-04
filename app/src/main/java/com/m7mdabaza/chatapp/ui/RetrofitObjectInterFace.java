@@ -1,8 +1,8 @@
-package com.m7mdabaza.emlenotes.ui;
+package com.m7mdabaza.chatapp.ui;
 
 
-import com.m7mdabaza.emlenotes.pojo.FirstScreenResponse;
-import com.m7mdabaza.emlenotes.pojo.SecondScreenResponse;
+import com.m7mdabaza.chatapp.pojo.FirstScreenResponse;
+import com.m7mdabaza.chatapp.pojo.SecondScreenResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

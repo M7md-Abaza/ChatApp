@@ -1,5 +1,5 @@
-<resources>
-    <string name="app_name">Emle Notes</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Chat App</string>
     <string name="favorites">Favorites Contact</string>
     <string name="recent">Recent:</string>
     <string name="name">NAME</string>
@@ -10,6 +10,6 @@
     <string name="_2">2</string>
     <string name="new_group">New group</string>
     <string name="select_contacts">Select Contacts</string>
-    <string name="enter_message">Enter Message ...</string>
+    <string name="enter_message" tools:ignore="TypographyEllipsis">Enter Message ...</string>
     <string name="text_message">Text Message</string>
 </resources>

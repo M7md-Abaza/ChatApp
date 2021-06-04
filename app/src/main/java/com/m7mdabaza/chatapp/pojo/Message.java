@@ -1,4 +1,4 @@
-package com.m7mdabaza.emlenotes.pojo;
+package com.m7mdabaza.chatapp.pojo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
